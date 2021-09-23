@@ -13,6 +13,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TodoStore } from './state/store';
+import { TodoQuery } from './state/query';
 
 @NgModule({
   declarations: [
@@ -29,9 +32,10 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TodoStore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

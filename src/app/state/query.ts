@@ -1,11 +1,13 @@
 import { Query } from "@datorama/akita";
 import { Observable } from "rxjs";
+
 import { Todo } from "../todo.model";
 import { TodoState, TodoStore } from "./store";
 
 export class TodoQuery extends Query<TodoState>{
+
   constructor(private todoStore: TodoStore) {
-    super(todoStore)
+    super(todoStore);
   }
 
   getTodos(): Observable<Todo[]> {
